@@ -1,12 +1,10 @@
-function [r, s] = newtonWithPrecision(expression, x0, decimalPlaces)
+function newtonWithPrecision(expression, x0, precision)
     syms x;
     f = expression;
     x_n = x0;
     x_new = x_n;
     x_old = 0;
     n = 0;
-    
-    precision = 0.5*10^(-decimalPlaces);
     
     disp("Derivative: ");
     disp(diff(f));
@@ -18,10 +16,9 @@ function [r, s] = newtonWithPrecision(expression, x0, decimalPlaces)
         x_n = x_n - vpa(subs(f, x, x_n))/vpa(subs(diff(f),x,x_n));
         x_new = x_n;
         n = n + 1;
-       
+        
+        disp("x_" + n + " = ");
         disp(x_n);
     end
-    r = n-1;
-    s = x_n;
 end
 
