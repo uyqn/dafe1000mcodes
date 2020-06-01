@@ -1,4 +1,4 @@
-function simpson = simpsonMethod(lowerBound, upperBound, expression, iterations)
+function simpson = simpsonMethod(expression, lowerBound, upperBound, iterations)
     
     syms x
     a = lowerBound;

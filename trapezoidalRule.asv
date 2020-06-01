@@ -1,0 +1,19 @@
+function trapezoidalRule(expression, domain, iterations)
+
+    syms x
+    f = expression;
+    N = iterations;
+    dx = (max(domain) - min(domain))/N;
+    
+    x = min(domain):dx:max(domain);
+    
+    T = min(domain);
+    
+    disp(T)
+    
+    for n = 1:N
+        
+    end
+    
+end
+

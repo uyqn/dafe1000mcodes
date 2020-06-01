@@ -13,7 +13,6 @@ function eulersMethod(domain, dy, dx, x0, y0, iterations)
         end
     end
     
-    
     x_n = x0;
     y_n = y0;
     
@@ -23,6 +22,7 @@ function eulersMethod(domain, dy, dx, x0, y0, iterations)
         hold on
         y_n = vpa(subs(F, [x, y], [x_n, y_n]))*dx + y_n;
         x_n = x_n + dx;
+                
         pause(0.1)
     end
     hold off

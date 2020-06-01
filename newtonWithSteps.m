@@ -1,11 +1,11 @@
-function newtonWithSteps(expression, iterations, initialvalue)
+function newtonWithSteps(expression, x0, iterations)
     syms x;
     f = expression;
     N = iterations;
-    x_n = initialvalue;
+    x_n = x0;
     
     disp("Derivative: ");
-    disp(diff(f));
+    pretty(diff(f));
     
     disp(" ");
     disp("Newton's method iterations: ");
